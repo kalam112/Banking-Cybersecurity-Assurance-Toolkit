@@ -1,1 +1,310 @@
+# Digital Banking Cybersecurity Checklist
 
+## Purpose
+This checklist helps banks, fintechs, IT auditors, cybersecurity teams, and compliance professionals assess cybersecurity controls for digital banking platforms, including internet banking, mobile banking, API banking, payment services, and customer-facing financial applications.
+
+## Scope
+This checklist may be used for:
+- Internet banking platforms
+- Mobile banking applications
+- Open banking/API platforms
+- Payment gateways
+- Customer portals
+- Agent banking platforms
+- Digital onboarding systems
+- Card and transaction services
+- Third-party fintech integrations
+
+## Assessment Information
+
+| Item | Details |
+|---|---|
+| Assessment Name |  |
+| System/Application Name |  |
+| Business Owner |  |
+| Technical Owner |  |
+| Assessment Date |  |
+| Assessor Name |  |
+| Environment Reviewed | Production / UAT / DR / Cloud / Hybrid |
+| Applicable Regulation / Standard |  |
+| Assessment Status | Draft / In Progress / Completed |
+
+## Rating Scale
+
+| Rating | Description |
+|---|---|
+| Compliant | Control is implemented and evidence is available |
+| Partially Compliant | Control is partially implemented or evidence is incomplete |
+| Non-Compliant | Control is not implemented |
+| Not Applicable | Control is not relevant to the environment |
+| Observation | Improvement opportunity identified |
+
+---
+
+# 1. Governance and Security Management
+
+| ID | Control Requirement | Status | Evidence / Remarks |
+|---|---|---|---|
+| GOV-01 | A formal cybersecurity policy exists for digital banking services. |  |  |
+| GOV-02 | Digital banking security roles and responsibilities are clearly defined. |  |  |
+| GOV-03 | Digital banking systems are included in the enterprise risk assessment. |  |  |
+| GOV-04 | Security requirements are approved before new digital banking services go live. |  |  |
+| GOV-05 | Cybersecurity risks are reported to senior management or relevant risk committees. |  |  |
+| GOV-06 | Critical digital banking assets are identified and classified. |  |  |
+| GOV-07 | Third-party service providers are subject to security due diligence. |  |  |
+| GOV-08 | Security exceptions are formally approved, documented, and periodically reviewed. |  |  |
+
+---
+
+# 2. Secure Software Development Lifecycle
+
+| ID | Control Requirement | Status | Evidence / Remarks |
+|---|---|---|---|
+| SSDLC-01 | Secure coding standards are defined and followed. |  |  |
+| SSDLC-02 | Security requirements are included during application design. |  |  |
+| SSDLC-03 | Threat modelling is performed for critical digital banking applications. |  |  |
+| SSDLC-04 | Source code review is performed before production deployment. |  |  |
+| SSDLC-05 | Static application security testing is performed. |  |  |
+| SSDLC-06 | Dynamic application security testing is performed. |  |  |
+| SSDLC-07 | Software composition analysis is performed for third-party/open-source components. |  |  |
+| SSDLC-08 | Critical and high vulnerabilities are remediated before production release. |  |  |
+| SSDLC-09 | Emergency releases are subject to post-implementation review. |  |  |
+| SSDLC-10 | Developer access to production systems is restricted and monitored. |  |  |
+
+---
+
+# 3. Authentication and Session Security
+
+| ID | Control Requirement | Status | Evidence / Remarks |
+|---|---|---|---|
+| AUTH-01 | Multi-factor authentication is implemented for customers where applicable. |  |  |
+| AUTH-02 | Strong authentication is enforced for administrators and privileged users. |  |  |
+| AUTH-03 | Password policy meets approved complexity and expiry requirements. |  |  |
+| AUTH-04 | Account lockout is enforced after repeated failed login attempts. |  |  |
+| AUTH-05 | Login notifications or alerts are sent for high-risk events. |  |  |
+| AUTH-06 | Session timeout is configured for inactive sessions. |  |  |
+| AUTH-07 | Session tokens are securely generated, protected, and invalidated after logout. |  |  |
+| AUTH-08 | Concurrent session control is implemented where required. |  |  |
+| AUTH-09 | High-risk transactions require step-up authentication. |  |  |
+| AUTH-10 | Forgotten password and account recovery processes are secure. |  |  |
+
+---
+
+# 4. Access Control and Privileged Access
+
+| ID | Control Requirement | Status | Evidence / Remarks |
+|---|---|---|---|
+| AC-01 | Role-based access control is implemented. |  |  |
+| AC-02 | User access is granted based on approved requests. |  |  |
+| AC-03 | Maker-checker approval is enforced for critical administrative activities. |  |  |
+| AC-04 | Privileged access is restricted to authorised personnel only. |  |  |
+| AC-05 | Privileged sessions are logged and monitored. |  |  |
+| AC-06 | Periodic user access review is performed. |  |  |
+| AC-07 | Dormant and inactive user accounts are disabled or removed. |  |  |
+| AC-08 | Segregation of duties is enforced for sensitive functions. |  |  |
+| AC-09 | Emergency access is time-bound, approved, and reviewed. |  |  |
+| AC-10 | Service accounts are documented, approved, and periodically reviewed. |  |  |
+
+---
+
+# 5. API and Integration Security
+
+| ID | Control Requirement | Status | Evidence / Remarks |
+|---|---|---|---|
+| API-01 | APIs are inventoried and classified based on criticality. |  |  |
+| API-02 | API authentication and authorisation are implemented securely. |  |  |
+| API-03 | API keys, tokens, and secrets are securely stored and rotated. |  |  |
+| API-04 | Rate limiting and throttling are implemented. |  |  |
+| API-05 | Input validation is enforced for API requests. |  |  |
+| API-06 | Sensitive data is not exposed in API responses. |  |  |
+| API-07 | APIs are protected against OWASP API Top 10 risks. |  |  |
+| API-08 | Third-party API integrations are reviewed and approved. |  |  |
+| API-09 | API logs are captured and monitored for suspicious activity. |  |  |
+| API-10 | API documentation is maintained and access-controlled. |  |  |
+
+---
+
+# 6. Data Protection and Privacy
+
+| ID | Control Requirement | Status | Evidence / Remarks |
+|---|---|---|---|
+| DATA-01 | Sensitive customer data is identified and classified. |  |  |
+| DATA-02 | Data encryption is implemented for data in transit. |  |  |
+| DATA-03 | Data encryption is implemented for data at rest where required. |  |  |
+| DATA-04 | Customer data masking is applied in logs, reports, and non-production systems. |  |  |
+| DATA-05 | Access to customer information is restricted based on business need. |  |  |
+| DATA-06 | Data retention and disposal requirements are defined and followed. |  |  |
+| DATA-07 | Production data is not used in test environments unless properly masked. |  |  |
+| DATA-08 | Data leakage prevention controls are implemented where applicable. |  |  |
+| DATA-09 | Privacy impact assessment is performed for new digital banking services. |  |  |
+| DATA-10 | Customer consent and privacy notices are managed as required. |  |  |
+
+---
+
+# 7. Transaction Security and Fraud Controls
+
+| ID | Control Requirement | Status | Evidence / Remarks |
+|---|---|---|---|
+| TXN-01 | Transaction limits are defined based on customer, channel, and risk profile. |  |  |
+| TXN-02 | High-risk transactions require additional verification. |  |  |
+| TXN-03 | Real-time fraud monitoring is implemented for digital transactions. |  |  |
+| TXN-04 | Unusual transaction patterns trigger alerts or reviews. |  |  |
+| TXN-05 | Beneficiary addition or modification is subject to strong verification. |  |  |
+| TXN-06 | Payment approval workflows are enforced for corporate users. |  |  |
+| TXN-07 | Transaction logs are complete, tamper-resistant, and retained. |  |  |
+| TXN-08 | Failed, reversed, and suspicious transactions are monitored. |  |  |
+| TXN-09 | Customer alerts are generated for financial transactions. |  |  |
+| TXN-10 | Fraud investigation procedures are documented and followed. |  |  |
+
+---
+
+# 8. Infrastructure, Network, and Cloud Security
+
+| ID | Control Requirement | Status | Evidence / Remarks |
+|---|---|---|---|
+| INF-01 | Digital banking systems are hosted in approved and secured environments. |  |  |
+| INF-02 | Network segmentation is implemented for critical banking systems. |  |  |
+| INF-03 | Firewalls and security groups are configured using least privilege. |  |  |
+| INF-04 | Internet-facing services are reviewed and hardened. |  |  |
+| INF-05 | Servers, databases, and middleware are securely configured. |  |  |
+| INF-06 | Critical patches are applied within approved timelines. |  |  |
+| INF-07 | Vulnerability scanning is performed regularly. |  |  |
+| INF-08 | Endpoint protection is deployed on relevant systems. |  |  |
+| INF-09 | Cloud configurations are reviewed against security baselines. |  |  |
+| INF-10 | DR and backup infrastructure are secured and tested. |  |  |
+
+---
+
+# 9. Logging, Monitoring, and SOC
+
+| ID | Control Requirement | Status | Evidence / Remarks |
+|---|---|---|---|
+| LOG-01 | Security logs are enabled for digital banking applications. |  |  |
+| LOG-02 | Authentication, transaction, administrative, and error logs are captured. |  |  |
+| LOG-03 | Logs are protected from unauthorised modification or deletion. |  |  |
+| LOG-04 | Critical logs are integrated with SIEM or central monitoring tools. |  |  |
+| LOG-05 | SOC use cases cover digital banking threat scenarios. |  |  |
+| LOG-06 | Alerts are reviewed and escalated based on severity. |  |  |
+| LOG-07 | Log retention meets regulatory and organisational requirements. |  |  |
+| LOG-08 | Time synchronisation is configured across systems. |  |  |
+| LOG-09 | Suspicious activities are investigated and documented. |  |  |
+| LOG-10 | Monitoring rules are periodically reviewed and tuned. |  |  |
+
+---
+
+# 10. Vulnerability Assessment and Penetration Testing
+
+| ID | Control Requirement | Status | Evidence / Remarks |
+|---|---|---|---|
+| VAPT-01 | Vulnerability assessment is performed periodically. |  |  |
+| VAPT-02 | Penetration testing is conducted before major releases. |  |  |
+| VAPT-03 | Mobile and API security testing are included in the test scope. |  |  |
+| VAPT-04 | Testing includes authentication, authorisation, session, and business logic flaws. |  |  |
+| VAPT-05 | Findings are risk-rated and assigned to owners. |  |  |
+| VAPT-06 | Critical and high findings are remediated within approved timelines. |  |  |
+| VAPT-07 | Retesting is performed to validate closure. |  |  |
+| VAPT-08 | Exceptions are approved and tracked. |  |  |
+| VAPT-09 | External-facing assets are regularly scanned. |  |  |
+| VAPT-10 | VAPT reports are reviewed by security and business stakeholders. |  |  |
+
+---
+
+# 11. Incident Response and Cyber Resilience
+
+| ID | Control Requirement | Status | Evidence / Remarks |
+|---|---|---|---|
+| IR-01 | Digital banking incident response procedures are documented. |  |  |
+| IR-02 | Incident severity classification is defined. |  |  |
+| IR-03 | Cyber incidents are reported to relevant stakeholders and regulators where required. |  |  |
+| IR-04 | Incident response roles and escalation paths are defined. |  |  |
+| IR-05 | Tabletop exercises are conducted for digital banking incidents. |  |  |
+| IR-06 | Cyber crisis communication procedures are documented. |  |  |
+| IR-07 | Root cause analysis is performed for major incidents. |  |  |
+| IR-08 | Lessons learned are tracked and implemented. |  |  |
+| IR-09 | Backup and recovery procedures are tested. |  |  |
+| IR-10 | Business continuity and DR plans include digital banking scenarios. |  |  |
+
+---
+
+# 12. Third-Party and Outsourcing Risk
+
+| ID | Control Requirement | Status | Evidence / Remarks |
+|---|---|---|---|
+| TPR-01 | Third-party digital banking service providers are identified and classified. |  |  |
+| TPR-02 | Security due diligence is performed before onboarding vendors. |  |  |
+| TPR-03 | Contracts include cybersecurity, data protection, audit, and incident reporting clauses. |  |  |
+| TPR-04 | Vendor access is restricted and monitored. |  |  |
+| TPR-05 | Third-party integrations are reviewed before production deployment. |  |  |
+| TPR-06 | Vendor security performance is periodically reviewed. |  |  |
+| TPR-07 | Outsourced services are included in business continuity and incident response planning. |  |  |
+| TPR-08 | Exit strategy and data return/deletion requirements are defined. |  |  |
+
+---
+
+# 13. Compliance and Audit Evidence
+
+| ID | Control Requirement | Status | Evidence / Remarks |
+|---|---|---|---|
+| COMP-01 | Applicable regulatory and legal requirements are identified. |  |  |
+| COMP-02 | Digital banking controls are mapped with relevant standards and regulations. |  |  |
+| COMP-03 | Audit evidence is collected, retained, and traceable. |  |  |
+| COMP-04 | Previous audit findings are tracked until closure. |  |  |
+| COMP-05 | Compliance reports are reviewed by responsible management. |  |  |
+| COMP-06 | Control owners are assigned for key cybersecurity controls. |  |  |
+| COMP-07 | Independent security reviews are performed where required. |  |  |
+| COMP-08 | Regulatory submissions are accurate, timely, and approved. |  |  |
+
+---
+
+# 14. Management Reporting
+
+| ID | Control Requirement | Status | Evidence / Remarks |
+|---|---|---|---|
+| REP-01 | Digital banking cybersecurity risk is reported to management. |  |  |
+| REP-02 | Key risk indicators and key performance indicators are defined. |  |  |
+| REP-03 | Critical vulnerabilities and incidents are reported with remediation status. |  |  |
+| REP-04 | Compliance status is periodically reported. |  |  |
+| REP-05 | Board or committee-level reporting includes major digital banking cyber risks. |  |  |
+| REP-06 | Trends, recurring issues, and systemic control weaknesses are analysed. |  |  |
+
+---
+
+# Summary of Findings
+
+| Finding ID | Domain | Risk Rating | Finding Summary | Owner | Target Date | Status |
+|---|---|---|---|---|---|---|
+| F-001 |  | Critical / High / Medium / Low |  |  |  | Open / Closed |
+
+## Risk Rating Guide
+
+| Rating | Description |
+|---|---|
+| Critical | Immediate risk to customer funds, sensitive data, regulatory compliance, or service availability |
+| High | Significant control weakness requiring urgent remediation |
+| Medium | Moderate risk requiring planned remediation |
+| Low | Minor weakness or improvement opportunity |
+
+## Suggested Evidence
+
+Examples of evidence that may be collected:
+
+- Approved cybersecurity policy
+- Digital banking architecture diagram
+- Risk assessment report
+- VAPT report
+- Source code review report
+- API inventory
+- Access control matrix
+- User access review evidence
+- MFA configuration screenshot
+- SIEM log integration evidence
+- Incident response plan
+- DR test report
+- Vendor security assessment
+- Audit report
+- Remediation tracker
+- Management committee minutes
+- Board cyber risk report
+
+## Disclaimer
+This checklist is provided for educational, professional, and cybersecurity assurance purposes. It should be tailored based on each organisation’s regulatory requirements, risk appetite, technology environment, and internal policies.
